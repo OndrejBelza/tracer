@@ -9,6 +9,7 @@ type Span interface {
 	// the Span the value will be overridden except for error tags where the first
 	// value is persisted.
 	Tag(key, value string)
+	TraceID() string
 }
 
 type ctxKey struct{}

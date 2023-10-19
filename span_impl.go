@@ -31,4 +31,8 @@ func (s *ZipkinSpan) Context() model.SpanContext {
 	return s.zipkinSpan.Context()
 }
 
+func (s *ZipkinSpan) TraceID() string {
+	return s.zipkinSpan.Context().TraceID.String()
+}
+
 var _ Span = (*ZipkinSpan)(nil)
